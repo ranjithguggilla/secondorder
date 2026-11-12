@@ -1,0 +1,646 @@
+{
+  "version": "0.1.0",
+  "data": {
+    "order_lines": 69659,
+    "purchase_days": 67591,
+    "customers": 23570,
+    "first_date": "1997-01-01",
+    "last_date": "1998-06-30",
+    "last_first_purchase": "1997-03-25",
+    "one_time_buyers": 12054,
+    "one_time_share": 0.5114128128977514,
+    "zero_value_lines": 80,
+    "same_day_extra_lines": 2068
+  },
+  "origins": [
+    {
+      "name": "o0",
+      "origin": "1997-03-31",
+      "target_ends": "1997-06-30",
+      "role": "train"
+    },
+    {
+      "name": "o1",
+      "origin": "1997-06-30",
+      "target_ends": "1997-09-29",
+      "role": "train"
+    },
+    {
+      "name": "o2",
+      "origin": "1997-09-29",
+      "target_ends": "1997-12-29",
+      "role": "train"
+    },
+    {
+      "name": "o3",
+      "origin": "1997-12-29",
+      "target_ends": "1998-03-30",
+      "role": "validation"
+    },
+    {
+      "name": "o4",
+      "origin": "1998-03-30",
+      "target_ends": "1998-06-29",
+      "role": "test"
+    }
+  ],
+  "label_windows_clean_for_validation": true,
+  "label_windows_clean_for_test": true,
+  "boost_grid_validation": {
+    "shallow": {
+      "poisson_dev_rescaled": 0.7228695339702358,
+      "poisson_dev_raw": 0.7159817082005995
+    },
+    "medium": {
+      "poisson_dev_rescaled": 0.7547273704995545,
+      "poisson_dev_raw": 0.750480174209988
+    },
+    "deep": {
+      "poisson_dev_rescaled": 0.7482333462252412,
+      "poisson_dev_raw": 0.7501750117102315
+    }
+  },
+  "boost_config_chosen": "shallow",
+  "boost_rescale_ratios_validation": {
+    "purchases": 1.0422223481646307,
+    "spend": 1.0598140752749428
+  },
+  "validation": {
+    "population mean": {
+      "customers": 23570,
+      "purchases_actual": 6658.0,
+      "purchases_predicted": 8024.333333333336,
+      "purchases_bias_pct": 20.521678181636172,
+      "purchases_mae": 0.5123118797418533,
+      "purchases_rmse": 0.9022779946031133,
+      "purchases_poisson_dev": 1.1711108333196523,
+      "purchases_spearman": 0.0,
+      "spend_actual": 264305.36,
+      "spend_predicted": 316207.92,
+      "spend_bias_pct": 19.637346741662753,
+      "spend_mae": 20.36093463927038,
+      "spend_rmse": 46.629609194787314,
+      "spend_spearman": 0.0,
+      "top10_share": 0.10662193910861287,
+      "top20_share": 0.21231506617951298,
+      "oracle_top10_share": 0.8967336492911078
+    },
+    "historical rate": {
+      "customers": 23570,
+      "purchases_actual": 6658.0,
+      "purchases_predicted": 9021.729647389342,
+      "purchases_bias_pct": 35.502097437508894,
+      "purchases_mae": 0.36955703890868685,
+      "purchases_rmse": 0.7525007328263954,
+      "purchases_poisson_dev": 1.9344589006364252,
+      "purchases_spearman": 0.4219817993716285,
+      "spend_actual": 264305.36,
+      "spend_predicted": 352404.643926688,
+      "spend_bias_pct": 33.33238642102756,
+      "spend_mae": 14.893881960155802,
+      "spend_rmse": 42.74250107796832,
+      "spend_spearman": 0.4145274280533137,
+      "top10_share": 0.5502566425440636,
+      "top20_share": 0.7173343741496578,
+      "oracle_top10_share": 0.8967336492911078
+    },
+    "BG/NBD + Gamma-Gamma": {
+      "customers": 23570,
+      "purchases_actual": 6658.0,
+      "purchases_predicted": 6515.659343032303,
+      "purchases_bias_pct": -2.137889110358926,
+      "purchases_mae": 0.3270353914816288,
+      "purchases_rmse": 0.6778225919245415,
+      "purchases_poisson_dev": 0.7198423074122539,
+      "purchases_spearman": 0.38822335491284643,
+      "spend_actual": 264305.36,
+      "spend_predicted": 257700.946403873,
+      "spend_bias_pct": -2.4987815593777496,
+      "spend_mae": 13.116150601861369,
+      "spend_rmse": 35.346575157280455,
+      "spend_spearman": 0.3647036097981012,
+      "top10_share": 0.5667960725427589,
+      "top20_share": 0.7225607532136314,
+      "oracle_top10_share": 0.8967336492911078
+    },
+    "Pareto/NBD + Gamma-Gamma": {
+      "customers": 23570,
+      "purchases_actual": 6658.0,
+      "purchases_predicted": 6510.29397358431,
+      "purchases_bias_pct": -2.2184744129722156,
+      "purchases_mae": 0.32204500337171826,
+      "purchases_rmse": 0.6795560613186652,
+      "purchases_poisson_dev": 0.7170303677078319,
+      "purchases_spearman": 0.3928465135404477,
+      "spend_actual": 264305.36,
+      "spend_predicted": 255924.34000274027,
+      "spend_bias_pct": -3.1709610419023315,
+      "spend_mae": 12.937409888235903,
+      "spend_rmse": 35.56517888122364,
+      "spend_spearman": 0.38032796502835664,
+      "top10_share": 0.5675141434891825,
+      "top20_share": 0.7171325242893297,
+      "oracle_top10_share": 0.8967336492911078
+    },
+    "LightGBM": {
+      "customers": 23570,
+      "purchases_actual": 6658.0,
+      "purchases_predicted": 8443.790386305987,
+      "purchases_bias_pct": 26.821724035836404,
+      "purchases_mae": 0.3709460378250531,
+      "purchases_rmse": 0.6834504211738025,
+      "purchases_poisson_dev": 0.7159817082005995,
+      "purchases_spearman": 0.4004867690618409,
+      "spend_actual": 264305.36,
+      "spend_predicted": 381772.89524874836,
+      "spend_bias_pct": 44.44387175831332,
+      "spend_mae": 15.988073351753394,
+      "spend_rmse": 37.30616451329455,
+      "spend_spearman": 0.38561434552907553,
+      "top10_share": 0.5593872178755663,
+      "top20_share": 0.7227597276120319,
+      "oracle_top10_share": 0.8967336492911078
+    },
+    "LightGBM + last-quarter rescale": {
+      "customers": 23570,
+      "purchases_actual": 6658.0,
+      "purchases_predicted": 8800.30704382576,
+      "purchases_bias_pct": 32.17643502291618,
+      "purchases_mae": 0.3782334169306959,
+      "purchases_rmse": 0.6914985633916539,
+      "purchases_poisson_dev": 0.7228695339702358,
+      "purchases_spearman": 0.4004867690618409,
+      "spend_actual": 264305.36,
+      "spend_predicted": 404608.28794308985,
+      "spend_bias_pct": 53.08364837666928,
+      "spend_mae": 16.565354359502948,
+      "spend_rmse": 38.24234103708957,
+      "spend_spearman": 0.38561434552907553,
+      "top10_share": 0.5593872178755663,
+      "top20_share": 0.7227597276120319,
+      "oracle_top10_share": 0.8967336492911078
+    }
+  },
+  "selection": {
+    "rule": "simplest model whose validation purchase MAE is within one bootstrap SE of the best",
+    "best_by_mae": "Pareto/NBD + Gamma-Gamma",
+    "shipped": "Pareto/NBD + Gamma-Gamma",
+    "mae": {
+      "population mean": 0.5123118797418533,
+      "historical rate": 0.36955703890868685,
+      "BG/NBD + Gamma-Gamma": 0.3270353914816288,
+      "Pareto/NBD + Gamma-Gamma": 0.32204500337171826,
+      "LightGBM": 0.3709460378250531,
+      "LightGBM + last-quarter rescale": 0.3782334169306959
+    },
+    "se_vs_best": {
+      "population mean": 0.00303357808489561,
+      "historical rate": 0.00200689517527935,
+      "BG/NBD + Gamma-Gamma": 0.0003826293997434023,
+      "Pareto/NBD + Gamma-Gamma": 0.0,
+      "LightGBM": 0.0014959341607288634,
+      "LightGBM + last-quarter rescale": 0.0015506037731523588
+    }
+  },
+  "test": {
+    "population mean": {
+      "customers": 23570,
+      "purchases_actual": 5664.0,
+      "purchases_predicted": 7682.750000000002,
+      "purchases_bias_pct": 35.64177259887009,
+      "purchases_mae": 0.47435111185432544,
+      "purchases_rmse": 0.8482634431579421,
+      "purchases_poisson_dev": 1.083160321111541,
+      "purchases_spearman": 0.0,
+      "spend_actual": 213400.38999999998,
+      "spend_predicted": 303232.2800000001,
+      "spend_bias_pct": 42.09546664839745,
+      "spend_mae": 18.349299834774833,
+      "spend_rmse": 44.80961779636961,
+      "spend_spearman": 0.0,
+      "top10_share": 0.09582466086402186,
+      "top20_share": 0.19619626749510627,
+      "oracle_top10_share": 0.9297886006675059
+    },
+    "historical rate": {
+      "customers": 23570,
+      "purchases_actual": 5664.0,
+      "purchases_predicted": 8497.089949571193,
+      "purchases_bias_pct": 50.019243459943375,
+      "purchases_mae": 0.337708634886135,
+      "purchases_rmse": 0.7087265398462752,
+      "purchases_poisson_dev": 1.3098308916348278,
+      "purchases_spearman": 0.430976690865752,
+      "spend_actual": 213400.38999999998,
+      "spend_predicted": 332840.21456985985,
+      "spend_bias_pct": 55.96982487701165,
+      "spend_mae": 13.1178246901517,
+      "spend_rmse": 36.722190810901964,
+      "spend_spearman": 0.42129265955698747,
+      "top10_share": 0.5936872467758846,
+      "top20_share": 0.7595159034151718,
+      "oracle_top10_share": 0.9297886006675059
+    },
+    "BG/NBD + Gamma-Gamma": {
+      "customers": 23570,
+      "purchases_actual": 5664.0,
+      "purchases_predicted": 6411.948066141434,
+      "purchases_bias_pct": 13.205297777920787,
+      "purchases_mae": 0.292890601659046,
+      "purchases_rmse": 0.6369973425477684,
+      "purchases_poisson_dev": 0.613547642363785,
+      "purchases_spearman": 0.4063406280930532,
+      "spend_actual": 213400.38999999998,
+      "spend_predicted": 255482.85751108147,
+      "spend_bias_pct": 19.719958108362178,
+      "spend_mae": 11.327055087852196,
+      "spend_rmse": 31.429046684360106,
+      "spend_spearman": 0.38940526194419084,
+      "top10_share": 0.6124889462479427,
+      "top20_share": 0.7692390815218286,
+      "oracle_top10_share": 0.9297886006675059
+    },
+    "Pareto/NBD + Gamma-Gamma": {
+      "customers": 23570,
+      "purchases_actual": 5664.0,
+      "purchases_predicted": 6423.770790817611,
+      "purchases_bias_pct": 13.41403232375724,
+      "purchases_mae": 0.2895861549627184,
+      "purchases_rmse": 0.6358650225439486,
+      "purchases_poisson_dev": 0.6076969467879682,
+      "purchases_spearman": 0.41184938745174376,
+      "spend_actual": 213400.38999999998,
+      "spend_predicted": 254107.57713599293,
+      "spend_bias_pct": 19.0754980044755,
+      "spend_mae": 11.205681173044205,
+      "spend_rmse": 31.568085772602068,
+      "spend_spearman": 0.4000449390676659,
+      "top10_share": 0.6138582502121951,
+      "top20_share": 0.7727079599057902,
+      "oracle_top10_share": 0.9297886006675059
+    },
+    "LightGBM": {
+      "customers": 23570,
+      "purchases_actual": 5664.0,
+      "purchases_predicted": 6763.782884454928,
+      "purchases_bias_pct": 19.41707070012231,
+      "purchases_mae": 0.31249009494544344,
+      "purchases_rmse": 0.6199494021937714,
+      "purchases_poisson_dev": 0.6051627319987368,
+      "purchases_spearman": 0.4137589977210854,
+      "spend_actual": 213400.38999999998,
+      "spend_predicted": 261758.67819504914,
+      "spend_bias_pct": 22.660824656903934,
+      "spend_mae": 11.570978238787179,
+      "spend_rmse": 31.83535900276264,
+      "spend_spearman": 0.40042799491032377,
+      "top10_share": 0.6215103918038763,
+      "top20_share": 0.7729816707457752,
+      "oracle_top10_share": 0.9297886006675059
+    },
+    "LightGBM + last-quarter rescale": {
+      "customers": 23570,
+      "purchases_actual": 5664.0,
+      "purchases_predicted": 5333.299902581095,
+      "purchases_bias_pct": -5.8386316634693625,
+      "purchases_mae": 0.28910736739345055,
+      "purchases_rmse": 0.6291038952114187,
+      "purchases_poisson_dev": 0.5979800700923396,
+      "purchases_spearman": 0.4137589977210854,
+      "spend_actual": 213400.38999999998,
+      "spend_predicted": 181218.26492786728,
+      "spend_bias_pct": -15.08063086113981,
+      "spend_mae": 10.232937654400178,
+      "spend_rmse": 33.12464611918864,
+      "spend_spearman": 0.40042799491032377,
+      "top10_share": 0.6215103918038763,
+      "top20_share": 0.7729816707457752,
+      "oracle_top10_share": 0.9297886006675059
+    }
+  },
+  "test_boost_rescale_ratios": {
+    "purchases": 0.7885084417535808,
+    "spend": 0.6923104371455938
+  },
+  "test_paired_bootstrap": {
+    "population mean": {
+      "purchases_mae_diff_vs_shipped": {
+        "point": 0.18476495689160705,
+        "lo": 0.17840577098920318,
+        "hi": 0.19014671412344245
+      },
+      "spend_mae_diff_vs_shipped": {
+        "point": 7.143618661730628,
+        "lo": 6.767786133619861,
+        "hi": 7.496317568867821
+      },
+      "top10_share_diff_vs_shipped": {
+        "point": -0.5180335893481732,
+        "lo": -0.5421963047391916,
+        "hi": -0.47981581699311887
+      }
+    },
+    "historical rate": {
+      "purchases_mae_diff_vs_shipped": {
+        "point": 0.04812247992341662,
+        "lo": 0.04512095702612172,
+        "hi": 0.051296057897126976
+      },
+      "spend_mae_diff_vs_shipped": {
+        "point": 1.912143517107495,
+        "lo": 1.7045201240027072,
+        "hi": 2.152953112670995
+      },
+      "top10_share_diff_vs_shipped": {
+        "point": -0.02017100343631051,
+        "lo": -0.02998389094408576,
+        "hi": -0.00909406477152251
+      }
+    },
+    "BG/NBD + Gamma-Gamma": {
+      "purchases_mae_diff_vs_shipped": {
+        "point": 0.003304446696327623,
+        "lo": 0.0027191780531902257,
+        "hi": 0.003959563089775481
+      },
+      "spend_mae_diff_vs_shipped": {
+        "point": 0.12137391480799131,
+        "lo": 0.08606647592868177,
+        "hi": 0.16185685968431965
+      },
+      "top10_share_diff_vs_shipped": {
+        "point": -0.0013693039642523885,
+        "lo": -0.008283476305609813,
+        "hi": 0.003747202151541324
+      }
+    },
+    "LightGBM": {
+      "purchases_mae_diff_vs_shipped": {
+        "point": 0.022903939982725052,
+        "lo": 0.020742984077330714,
+        "hi": 0.025523873602957648
+      },
+      "spend_mae_diff_vs_shipped": {
+        "point": 0.3652970657429737,
+        "lo": 0.24264904560872944,
+        "hi": 0.4974417477168224
+      },
+      "top10_share_diff_vs_shipped": {
+        "point": 0.007652141591681261,
+        "lo": -0.0015681808072252582,
+        "hi": 0.016973927459323128
+      }
+    },
+    "LightGBM + last-quarter rescale": {
+      "purchases_mae_diff_vs_shipped": {
+        "point": -0.0004787875692678356,
+        "lo": -0.0032102052930148327,
+        "hi": 0.0019825873358226566
+      },
+      "spend_mae_diff_vs_shipped": {
+        "point": -0.9727435186440268,
+        "lo": -1.1420960236145585,
+        "hi": -0.7980035532124241
+      },
+      "top10_share_diff_vs_shipped": {
+        "point": 0.007652141591681261,
+        "lo": -0.0015681808072252582,
+        "hi": 0.016973927459323128
+      }
+    }
+  },
+  "shipped_model": "Pareto/NBD + Gamma-Gamma",
+  "one_time_buyers_at_test_origin": {
+    "share_of_customers": 0.527280441238863,
+    "share_of_next_quarter_spend": 0.06495255233601027,
+    "share_who_bought_again": 0.02993241068554876,
+    "repeat_buyers_bought_again": 0.2648537066953868
+  },
+  "p_alive_bands_test": [
+    {
+      "band": "(-0.001, 0.2]",
+      "customers": 1717,
+      "share_bought": 0.075713453698311,
+      "mean_spend": 3.776167734420501
+    },
+    {
+      "band": "(0.2, 0.4]",
+      "customers": 1365,
+      "share_bought": 0.11794871794871795,
+      "mean_spend": 4.933985347985348
+    },
+    {
+      "band": "(0.4, 0.6]",
+      "customers": 1082,
+      "share_bought": 0.1756007393715342,
+      "mean_spend": 8.424935304990758
+    },
+    {
+      "band": "(0.6, 0.8]",
+      "customers": 1500,
+      "share_bought": 0.21133333333333335,
+      "mean_spend": 10.210333333333333
+    },
+    {
+      "band": "(0.8, 1.0]",
+      "customers": 5478,
+      "share_bought": 0.39302665206279663,
+      "mean_spend": 29.55269076305221
+    }
+  ],
+  "bgnbd_params_test": {
+    "r": 0.2727642009136239,
+    "alpha": 5.933140486274004,
+    "a": 0.34328951522474455,
+    "b": 1.2671023286924448,
+    "gg_p": 7.890020831461149,
+    "gg_q": 2.414857950139777,
+    "gg_v": 7.361612567044295
+  },
+  "pareto_params_test": {
+    "r": 0.6168876680459613,
+    "alpha": 13.226672163870784,
+    "s": 0.28705035070358964,
+    "beta": 4.752023074041857,
+    "gg_p": 7.890020831461149,
+    "gg_q": 2.414857950139777,
+    "gg_v": 7.361612567044295
+  },
+  "bgnbd_params_validation": {
+    "r": 0.2661482875568401,
+    "alpha": 5.434424213452508,
+    "a": 0.4048943211367611,
+    "b": 1.3174626726747432,
+    "gg_p": 7.867732498672531,
+    "gg_q": 2.3912320418953574,
+    "gg_v": 7.26538625520725
+  },
+  "shuffled_cv_vs_forward": {
+    "shuffled_cv_poisson_dev": 0.8581723751966596,
+    "forward_poisson_dev": 0.7242308869215708,
+    "note": "shuffled rows scatter one customer across train and test folds and mix quarters"
+  },
+  "cohort_decay": {
+    "o0": {
+      "mean_purchases": 0.4019092066185829,
+      "mean_spend": 15.237745439117523,
+      "mean_T_weeks": 6.584799078732044
+    },
+    "o1": {
+      "mean_purchases": 0.30640644887568946,
+      "mean_spend": 12.30935468816292,
+      "mean_T_weeks": 19.584799078732043
+    },
+    "o2": {
+      "mean_purchases": 0.3130250318201103,
+      "mean_spend": 12.699983453542638,
+      "mean_T_weeks": 32.58479907873205
+    },
+    "o3": {
+      "mean_purchases": 0.2824777259227832,
+      "mean_spend": 11.213634280865506,
+      "mean_T_weeks": 45.58479907873205
+    },
+    "o4": {
+      "mean_purchases": 0.24030547305897326,
+      "mean_spend": 9.053898599915145,
+      "mean_T_weeks": 58.58479907873203
+    }
+  },
+  "lightgbm_T_range": {
+    "train_max_T": 38.714285714285715,
+    "validation_max_T": 51.714285714285715
+  },
+  "tracking_26w": {
+    "actual_final": 12322.0,
+    "bgnbd_final": 12556.743369169988,
+    "historical_final": 18043.45929477868,
+    "bgnbd_error_pct": 1.9050752245576064,
+    "historical_error_pct": 46.43287854876383
+  },
+  "economics": {
+    "assumptions": {
+      "margin": 0.3,
+      "cost_per_contact": 0.75,
+      "relative_lift": 0.1
+    },
+    "break_even_quarterly_spend": 25.0,
+    "mail_everyone_net_per_1000": -478.3830420025453,
+    "best_point": {
+      "random": {
+        "fraction": 0.01,
+        "net_per_1000": -5.698014425116674
+      },
+      "historical rate": {
+        "fraction": 0.06999999999999999,
+        "net_per_1000": 89.20197708952074
+      },
+      "Pareto/NBD + Gamma-Gamma": {
+        "fraction": 0.08,
+        "net_per_1000": 94.24305897327129
+      },
+      "LightGBM + last-quarter rescale": {
+        "fraction": 0.060000000000000005,
+        "net_per_1000": 95.89088247772608
+      },
+      "hindsight": {
+        "fraction": 0.09999999999999999,
+        "net_per_1000": 177.54635129401854
+      }
+    },
+    "sensitivity": [
+      {
+        "lift": 0.05,
+        "ranking": "random",
+        "fraction": 0.01,
+        "net_per_1000": -6.603780229104793
+      },
+      {
+        "lift": 0.05,
+        "ranking": "historical rate",
+        "fraction": 0.03,
+        "net_per_1000": 28.51083792957149
+      },
+      {
+        "lift": 0.05,
+        "ranking": "Pareto/NBD + Gamma-Gamma",
+        "fraction": 0.03,
+        "net_per_1000": 30.264724225710715
+      },
+      {
+        "lift": 0.05,
+        "ranking": "LightGBM + last-quarter rescale",
+        "fraction": 0.04,
+        "net_per_1000": 30.13946754348758
+      },
+      {
+        "lift": 0.05,
+        "ranking": "hindsight",
+        "fraction": 0.05,
+        "net_per_1000": 61.77798048366564
+      },
+      {
+        "lift": 0.1,
+        "ranking": "random",
+        "fraction": 0.01,
+        "net_per_1000": -5.698014425116674
+      },
+      {
+        "lift": 0.1,
+        "ranking": "historical rate",
+        "fraction": 0.06999999999999999,
+        "net_per_1000": 89.20197708952074
+      },
+      {
+        "lift": 0.1,
+        "ranking": "Pareto/NBD + Gamma-Gamma",
+        "fraction": 0.08,
+        "net_per_1000": 94.24305897327129
+      },
+      {
+        "lift": 0.1,
+        "ranking": "LightGBM + last-quarter rescale",
+        "fraction": 0.060000000000000005,
+        "net_per_1000": 95.89088247772608
+      },
+      {
+        "lift": 0.1,
+        "ranking": "hindsight",
+        "fraction": 0.09999999999999999,
+        "net_per_1000": 177.54635129401854
+      },
+      {
+        "lift": 0.2,
+        "ranking": "random",
+        "fraction": 0.02,
+        "net_per_1000": -3.7460161221892223
+      },
+      {
+        "lift": 0.2,
+        "ranking": "historical rate",
+        "fraction": 0.2,
+        "net_per_1000": 262.5947984726349
+      },
+      {
+        "lift": 0.2,
+        "ranking": "Pareto/NBD + Gamma-Gamma",
+        "fraction": 0.16,
+        "net_per_1000": 272.2462706830725
+      },
+      {
+        "lift": 0.2,
+        "ranking": "LightGBM + last-quarter rescale",
+        "fraction": 0.16,
+        "net_per_1000": 272.458218073823
+      },
+      {
+        "lift": 0.2,
+        "ranking": "hindsight",
+        "fraction": 0.13,
+        "net_per_1000": 438.9513449299995
+      }
+    ],
+    "customers_in_base": 23570
+  },
+  "runtime_seconds": 63.1
+}

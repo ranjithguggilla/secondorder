@@ -1,0 +1,37 @@
+{
+  "shipped": "Pareto/NBD + Gamma-Gamma",
+  "horizon_weeks": 13.0,
+  "families": {
+    "BG/NBD + Gamma-Gamma": {
+      "kind": "bgnbd",
+      "purchase_params": {
+        "r": 0.2727642009136239,
+        "alpha": 5.933140486274004,
+        "a": 0.34328951522474455,
+        "b": 1.2671023286924448
+      },
+      "value_params": {
+        "p": 7.890020831461149,
+        "q": 2.414857950139777,
+        "v": 7.361612567044295
+      },
+      "population_value": 41.05237313851011
+    },
+    "Pareto/NBD + Gamma-Gamma": {
+      "kind": "pareto",
+      "purchase_params": {
+        "r": 0.6168876680459613,
+        "alpha": 13.226672163870784,
+        "s": 0.28705035070358964,
+        "beta": 4.752023074041857
+      },
+      "value_params": {
+        "p": 7.890020831461149,
+        "q": 2.414857950139777,
+        "v": 7.361612567044295
+      },
+      "population_value": 41.05237313851011
+    }
+  },
+  "break_even_quarterly_spend": 25.0
+}
