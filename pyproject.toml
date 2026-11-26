@@ -7,7 +7,7 @@ name = "secondorder"
 version = "0.1.0"
 description = "Next-quarter purchase and spend forecasts for repeat-buying customers, with honest validation"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Ranjith Guggilla", email = "ranjithguggilla668@gmail.com" }]
 dependencies = [
@@ -33,7 +33,7 @@ where = ["src"]
 
 [tool.ruff]
 line-length = 110
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM"]

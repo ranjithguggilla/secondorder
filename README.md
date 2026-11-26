@@ -124,7 +124,7 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-Python 3.11 or newer. The results above were produced on Python 3.13.
+Python 3.12 or newer. The results above were produced on Python 3.13.
 
 ## Usage
 
